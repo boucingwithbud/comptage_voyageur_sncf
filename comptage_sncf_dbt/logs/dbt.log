@@ -1,0 +1,165 @@
+[0m18:21:28.373070 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ee1343aa50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ee15527890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ee11cf79d0>]}
+
+
+============================== 18:21:28.414579 | 82cb144c-c757-44f4-902e-c43aaa4068da ==============================
+[0m18:21:28.414579 [info ] [MainThread]: Running with dbt=1.12.3
+[0m18:21:28.415677 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'debug': 'False', 'indirect_selection': 'eager', 'maximum_seed_size_mib': '1', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'empty': 'None', 'static_parser': 'True', 'hints_enabled': 'True', 'partial_parse': 'True', 'profiles_dir': '/home/paul/.dbt', 'log_path': 'logs', 'invocation_command': 'dbt init', 'quiet': 'False', 'use_experimental_parser': 'False', 'target_path': 'None', 'no_print': 'None', 'introspect': 'True', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'log_format': 'default', 'printer_width': '80', 'warn_error': 'None', 'fail_fast': 'False', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m18:21:28.496004 [info ] [MainThread]: Creating dbt configuration folder at /home/paul/.dbt
+[0m18:21:40.770390 [debug] [MainThread]: Starter project path: /home/paul/Documents/comptage_voyageur_sncf/comptage_sncf_dbt/.venv/lib/python3.14/site-packages/dbt/include/starter_project
+[0m18:21:40.789628 [info ] [MainThread]: Setting up your profile.
+[0m18:21:46.747880 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m18:21:46.748495 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m18:21:46.749075 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m18:25:25.869776 [info ] [MainThread]: Profile dbt_project written to /home/paul/.dbt/profiles.yml using target's profile_template.yml and your supplied values.
+[0m18:25:25.895001 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m18:25:25.898328 [info ] [MainThread]: dbt version: 1.12.3
+[0m18:25:25.901148 [info ] [MainThread]: python version: 3.14.4
+[0m18:25:25.904309 [info ] [MainThread]: python path: /home/paul/Documents/comptage_voyageur_sncf/comptage_sncf_dbt/.venv/bin/python
+[0m18:25:25.908138 [info ] [MainThread]: os info: Linux-7.0.0-31-generic-x86_64-inconnu-with-glibc2.43
+[0m18:25:26.050213 [info ] [MainThread]: Using profiles dir at /home/paul/.dbt
+[0m18:25:26.050841 [info ] [MainThread]: Using profiles.yml file at /home/paul/.dbt/profiles.yml
+[0m18:25:26.051625 [info ] [MainThread]: Using dbt_project.yml file at /home/paul/Documents/comptage_voyageur_sncf/comptage_sncf_dbt/dbt_project/dbt_project.yml
+[0m18:25:26.052144 [info ] [MainThread]: adapter type: databricks
+[0m18:25:26.052631 [info ] [MainThread]: adapter version: 1.12.5
+[0m18:25:26.198710 [info ] [MainThread]: Configuration:
+[0m18:25:26.199331 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m18:25:26.199838 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m18:25:26.200307 [info ] [MainThread]: Required dependencies:
+[0m18:25:26.200818 [debug] [MainThread]: Executing "git --help"
+[0m18:25:26.204270 [debug] [MainThread]: STDOUT: "b"usage : git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nCi-dessous les commandes Git habituelles dans diverses situations\xc2\xa0:\n\nd\xc3\xa9marrer une zone de travail (voir aussi\xc2\xa0: git help tutorial)\n   clone      Cloner un d\xc3\xa9p\xc3\xb4t dans un nouveau r\xc3\xa9pertoire\n   init       Cr\xc3\xa9er un d\xc3\xa9p\xc3\xb4t Git vide ou r\xc3\xa9initialiser un existant\n\ntravailler sur la modification actuelle (voir aussi\xc2\xa0: git help revisions)\n   add        Ajouter le contenu de fichiers dans l'index\n   mv         D\xc3\xa9placer ou renommer un fichier, un r\xc3\xa9pertoire, ou un lien symbolique\n   restore    Restaurer les fichiers l'arbre de travail\n   rm         Supprimer des fichiers de la copie de travail et de l'index\n\nexaminer l'historique et l'\xc3\xa9tat (voir aussi\xc2\xa0: git help revisions)\n   bisect     Trouver par recherche binaire la modification qui a introduit un bogue\n   diff       Afficher les changements entre les validations, entre validation et copie de travail, etc\n   grep       Afficher les lignes correspondant \xc3\xa0 un motif\n   log        Afficher l'historique des validations\n   show       Afficher diff\xc3\xa9rents types d'objets\n   status     Afficher l'\xc3\xa9tat de la copie de travail\n\nagrandir, marquer et modifier votre historique\n   backfill   Download missing objects in a partial clone\n   branch     Lister, cr\xc3\xa9er ou supprimer des branches\n   commit     Enregistrer les modifications dans le d\xc3\xa9p\xc3\xb4t\n   merge      Fusionner deux ou plusieurs historiques de d\xc3\xa9veloppement ensemble\n   rebase     R\xc3\xa9application des commits sur le sommet de l'autre base\n   reset      Set `HEAD` or the index to a known state\n   switch     Basculer de branche\n   tag        Create, list, delete or verify tags\n\ncollaborer (voir aussi\xc2\xa0: git help workflows)\n   fetch      T\xc3\xa9l\xc3\xa9charger les objets et r\xc3\xa9f\xc3\xa9rences depuis un autre d\xc3\xa9p\xc3\xb4t\n   pull       Rapatrier et int\xc3\xa9grer un autre d\xc3\xa9p\xc3\xb4t ou une branche locale\n   push       Mettre \xc3\xa0 jour les r\xc3\xa9f\xc3\xa9rences distantes ainsi que les objets associ\xc3\xa9s\n\n'git help -a' et 'git help -g' listent les sous-commandes disponibles et\nquelques concepts. Voir 'git help <commande>' ou 'git help <concept>'\npour en lire plus \xc3\xa0 propos d'une commande sp\xc3\xa9cifique ou d'un concept.\nVoir 'git help git' pour un survol du syst\xc3\xa8me.\n""
+[0m18:25:26.205146 [debug] [MainThread]: STDERR: "b''"
+[0m18:25:26.205786 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m18:25:26.206316 [info ] [MainThread]: Connection:
+[0m18:25:26.206914 [info ] [MainThread]:   host: https://ressources.data.sncf.com/explore/embed/dataset/comptage-voyageurs-trains-transilien/table/
+[0m18:25:26.207576 [info ] [MainThread]:   http_path: /sql/1.0/warehouses/d6caf492862d1779
+[0m18:25:26.208108 [info ] [MainThread]:   catalog: sncf_comptage
+[0m18:25:26.208803 [info ] [MainThread]:   schema: default
+[0m18:25:26.209558 [info ] [MainThread]: Registered adapter: databricks=1.12.5
+[0m18:25:26.370501 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=debug) - Creating connection
+[0m18:25:26.371019 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m18:25:28.333813 [info ] [MainThread]: Databricks adapter: SPOG discovery probe to 'https://https://ressources.data.sncf.com/explore/embed/dataset/comptage-voyageurs-trains-transilien/table//.well-known/databricks-config' failed after 3 attempts (last error: HTTPSConnectionPool(host='https', port=443): Max retries exceeded with url: //ressources.data.sncf.com/explore/embed/dataset/comptage-voyageurs-trains-transilien/table//.well-known/databricks-config (Caused by NameResolutionError("HTTPSConnection(host='https', port=443): Failed to resolve 'https' ([Errno -3] Temporary failure in name resolution)"))). Proceeding as a non-SPOG host. If https://ressources.data.sncf.com/explore/embed/dataset/comptage-voyageurs-trains-transilien/table/ is a SPOG (unified) workspace, routing errors may follow; verify network reachability to /.well-known/databricks-config.
+[0m18:25:28.345322 [info ] [MainThread]: Databricks adapter:   SPOG host (host_type=None): no
+[0m18:25:28.348841 [info ] [MainThread]: Databricks adapter:   workspace_id (from ?o= in http_path): None
+[0m18:25:28.352265 [info ] [MainThread]: Databricks adapter:   databricks-sql-connector version: 4.4.0 (supported)
+[0m18:25:28.355577 [info ] [MainThread]: Databricks adapter:   databricks-sdk version: 0.117.0 (supported)
+[0m18:25:28.358632 [debug] [MainThread]: Using databricks connection "debug"
+[0m18:25:28.361808 [debug] [MainThread]: On debug: select 1 as id
+[0m18:25:28.364995 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:25:29.143658 [error] [MainThread]: databricks-sql-connector adapter: ThriftBackend.attempt_request: Exception: 
+[0m18:25:29.186993 [error] [MainThread]: Databricks adapter: Connection(session-id=Unknown) - Exception while trying to create connection: Error during request to server. 
+Error properties: attempt=1/30, bounded-retry-delay=None, elapsed-seconds=0.13600468635559082/900.0, error-message=, http-code=403, method=OpenSession, no-retry-reason=non-retryable error, original-exception=, query-id=None, session-id=None
+[0m18:25:29.189878 [debug] [MainThread]: Databricks adapter: Exception while trying to execute query
+select 1 as id
+: Database Error
+  Error during request to server. 
+[0m18:25:29.192074 [debug] [MainThread]: On debug: No close available on handle
+[0m18:25:29.193742 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m18:25:29.196425 [info ] [MainThread]: [31m1 check failed:[0m
+[0m18:25:29.199605 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  Database Error
+    Error during request to server. 
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m18:25:29.202114 [info ] [MainThread]: Your new dbt project "dbt_project" was created!
+Initialized new project in /home/paul/Documents/comptage_voyageur_sncf/comptage_sncf_dbt/dbt_project/dbt_project
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m18:25:29.204452 [info ] [MainThread]: [31mYour profile may need adjustments. You can find the logs of `dbt debug` above[0m
+[0m18:25:29.211857 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 240.9353, "process_in_blocks": "12016", "process_kernel_time": 0.634205, "process_mem_max_rss": "372404", "process_out_blocks": "93280", "process_user_time": 10.374996}
+[0m18:25:29.217664 [debug] [MainThread]: Command `dbt init` succeeded at 18:25:29.216559 after 240.94 seconds
+[0m18:25:29.221902 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74edf8351cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74edf930a690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74edf930e250>]}
+[0m18:25:29.226253 [debug] [MainThread]: Flushing usage events
+[0m18:25:29.660110 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:25:44.839940 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d1717559fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d1719390f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d1715f0f890>]}
+
+
+============================== 18:25:44.843722 | 8eeeb914-efea-4006-88a2-af642a43f58e ==============================
+[0m18:25:44.843722 [info ] [MainThread]: Running with dbt=1.12.3
+[0m18:25:44.844605 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'version_check': 'True', 'log_cache_events': 'False', 'warn_error': 'None', 'hints_enabled': 'True', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'target_path': 'None', 'use_colors': 'True', 'log_format': 'default', 'no_print': 'None', 'use_experimental_parser': 'False', 'log_path': 'logs', 'partial_parse': 'True', 'debug': 'False', 'static_parser': 'True', 'profiles_dir': '/home/paul/.dbt', 'fail_fast': 'False', 'maximum_seed_size_mib': '1', 'invocation_command': 'dbt debug', 'empty': 'None', 'printer_width': '80', 'write_json': 'True', 'indirect_selection': 'eager'}
+[0m18:25:44.856746 [info ] [MainThread]: dbt version: 1.12.3
+[0m18:25:44.857698 [info ] [MainThread]: python version: 3.14.4
+[0m18:25:44.858919 [info ] [MainThread]: python path: /home/paul/Documents/comptage_voyageur_sncf/comptage_sncf_dbt/.venv/bin/python
+[0m18:25:44.861446 [info ] [MainThread]: os info: Linux-7.0.0-31-generic-x86_64-inconnu-with-glibc2.43
+[0m18:25:46.013138 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m18:25:46.013736 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m18:25:46.014233 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m18:25:46.695329 [info ] [MainThread]: Using profiles dir at /home/paul/.dbt
+[0m18:25:46.695958 [info ] [MainThread]: Using profiles.yml file at /home/paul/.dbt/profiles.yml
+[0m18:25:46.696563 [info ] [MainThread]: Using dbt_project.yml file at /home/paul/Documents/comptage_voyageur_sncf/comptage_sncf_dbt/dbt_project.yml
+[0m18:25:46.697099 [info ] [MainThread]: adapter type: databricks
+[0m18:25:46.697580 [info ] [MainThread]: adapter version: 1.12.5
+[0m18:25:46.698090 [info ] [MainThread]: Configuration:
+[0m18:25:46.698750 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m18:25:46.699467 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m18:25:46.700103 [info ] [MainThread]: Required dependencies:
+[0m18:25:46.700733 [debug] [MainThread]: Executing "git --help"
+[0m18:25:46.704189 [debug] [MainThread]: STDOUT: "b"usage : git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nCi-dessous les commandes Git habituelles dans diverses situations\xc2\xa0:\n\nd\xc3\xa9marrer une zone de travail (voir aussi\xc2\xa0: git help tutorial)\n   clone      Cloner un d\xc3\xa9p\xc3\xb4t dans un nouveau r\xc3\xa9pertoire\n   init       Cr\xc3\xa9er un d\xc3\xa9p\xc3\xb4t Git vide ou r\xc3\xa9initialiser un existant\n\ntravailler sur la modification actuelle (voir aussi\xc2\xa0: git help revisions)\n   add        Ajouter le contenu de fichiers dans l'index\n   mv         D\xc3\xa9placer ou renommer un fichier, un r\xc3\xa9pertoire, ou un lien symbolique\n   restore    Restaurer les fichiers l'arbre de travail\n   rm         Supprimer des fichiers de la copie de travail et de l'index\n\nexaminer l'historique et l'\xc3\xa9tat (voir aussi\xc2\xa0: git help revisions)\n   bisect     Trouver par recherche binaire la modification qui a introduit un bogue\n   diff       Afficher les changements entre les validations, entre validation et copie de travail, etc\n   grep       Afficher les lignes correspondant \xc3\xa0 un motif\n   log        Afficher l'historique des validations\n   show       Afficher diff\xc3\xa9rents types d'objets\n   status     Afficher l'\xc3\xa9tat de la copie de travail\n\nagrandir, marquer et modifier votre historique\n   backfill   Download missing objects in a partial clone\n   branch     Lister, cr\xc3\xa9er ou supprimer des branches\n   commit     Enregistrer les modifications dans le d\xc3\xa9p\xc3\xb4t\n   merge      Fusionner deux ou plusieurs historiques de d\xc3\xa9veloppement ensemble\n   rebase     R\xc3\xa9application des commits sur le sommet de l'autre base\n   reset      Set `HEAD` or the index to a known state\n   switch     Basculer de branche\n   tag        Create, list, delete or verify tags\n\ncollaborer (voir aussi\xc2\xa0: git help workflows)\n   fetch      T\xc3\xa9l\xc3\xa9charger les objets et r\xc3\xa9f\xc3\xa9rences depuis un autre d\xc3\xa9p\xc3\xb4t\n   pull       Rapatrier et int\xc3\xa9grer un autre d\xc3\xa9p\xc3\xb4t ou une branche locale\n   push       Mettre \xc3\xa0 jour les r\xc3\xa9f\xc3\xa9rences distantes ainsi que les objets associ\xc3\xa9s\n\n'git help -a' et 'git help -g' listent les sous-commandes disponibles et\nquelques concepts. Voir 'git help <commande>' ou 'git help <concept>'\npour en lire plus \xc3\xa0 propos d'une commande sp\xc3\xa9cifique ou d'un concept.\nVoir 'git help git' pour un survol du syst\xc3\xa8me.\n""
+[0m18:25:46.705617 [debug] [MainThread]: STDERR: "b''"
+[0m18:25:46.706407 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m18:25:46.707214 [info ] [MainThread]: Connection:
+[0m18:25:46.708083 [info ] [MainThread]:   host: https://ressources.data.sncf.com/explore/embed/dataset/comptage-voyageurs-trains-transilien/table/
+[0m18:25:46.708994 [info ] [MainThread]:   http_path: /sql/1.0/warehouses/d6caf492862d1779
+[0m18:25:46.709944 [info ] [MainThread]:   catalog: sncf_comptage
+[0m18:25:46.711212 [info ] [MainThread]:   schema: default
+[0m18:25:46.712425 [info ] [MainThread]: Registered adapter: databricks=1.12.5
+[0m18:25:46.872743 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=debug) - Creating connection
+[0m18:25:46.873293 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m18:25:48.644685 [info ] [MainThread]: Databricks adapter: SPOG discovery probe to 'https://https://ressources.data.sncf.com/explore/embed/dataset/comptage-voyageurs-trains-transilien/table//.well-known/databricks-config' failed after 3 attempts (last error: HTTPSConnectionPool(host='https', port=443): Max retries exceeded with url: //ressources.data.sncf.com/explore/embed/dataset/comptage-voyageurs-trains-transilien/table//.well-known/databricks-config (Caused by NameResolutionError("HTTPSConnection(host='https', port=443): Failed to resolve 'https' ([Errno -3] Temporary failure in name resolution)"))). Proceeding as a non-SPOG host. If https://ressources.data.sncf.com/explore/embed/dataset/comptage-voyageurs-trains-transilien/table/ is a SPOG (unified) workspace, routing errors may follow; verify network reachability to /.well-known/databricks-config.
+[0m18:25:48.655888 [info ] [MainThread]: Databricks adapter:   SPOG host (host_type=None): no
+[0m18:25:48.658082 [info ] [MainThread]: Databricks adapter:   workspace_id (from ?o= in http_path): None
+[0m18:25:48.660537 [info ] [MainThread]: Databricks adapter:   databricks-sql-connector version: 4.4.0 (supported)
+[0m18:25:48.663692 [info ] [MainThread]: Databricks adapter:   databricks-sdk version: 0.117.0 (supported)
+[0m18:25:48.667251 [debug] [MainThread]: Using databricks connection "debug"
+[0m18:25:48.670551 [debug] [MainThread]: On debug: select 1 as id
+[0m18:25:48.674092 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:25:49.392242 [error] [MainThread]: databricks-sql-connector adapter: ThriftBackend.attempt_request: Exception: 
+[0m18:25:49.433787 [error] [MainThread]: Databricks adapter: Connection(session-id=Unknown) - Exception while trying to create connection: Error during request to server. 
+Error properties: attempt=1/30, bounded-retry-delay=None, elapsed-seconds=0.11064887046813965/900.0, error-message=, http-code=403, method=OpenSession, no-retry-reason=non-retryable error, original-exception=, query-id=None, session-id=None
+[0m18:25:49.436844 [debug] [MainThread]: Databricks adapter: Exception while trying to execute query
+select 1 as id
+: Database Error
+  Error during request to server. 
+[0m18:25:49.439513 [debug] [MainThread]: On debug: No close available on handle
+[0m18:25:49.441349 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m18:25:49.444013 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m18:25:49.446115 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/paul/Documents/comptage_voyageur_sncf/comptage_sncf_dbt/dbt_project.yml> not found
+
+[0m18:25:49.448459 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  Database Error
+    Error during request to server. 
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m18:25:49.454477 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 4.714897, "process_in_blocks": "0", "process_kernel_time": 0.343653, "process_mem_max_rss": "300488", "process_out_blocks": "32", "process_user_time": 4.106859}
+[0m18:25:49.460015 [debug] [MainThread]: Command `dbt debug` failed at 18:25:49.459113 after 4.72 seconds
+[0m18:25:49.462325 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d16fd847a80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d16fd8b3e30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d16fd9268b0>]}
+[0m18:25:49.465060 [debug] [MainThread]: Flushing usage events
+[0m18:25:49.866162 [debug] [MainThread]: An error was encountered while trying to flush usage events
