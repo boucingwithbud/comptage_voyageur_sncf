@@ -1,0 +1,22 @@
+[2026-09-26T18:11:47.949+0000] {processor.py:186} INFO - Started process (PID=212) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/tutorial_objectstorage.py
+[2026-09-26T18:11:47.950+0000] {processor.py:914} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/tutorial_objectstorage.py for tasks to queue
+[2026-09-26T18:11:47.953+0000] {logging_mixin.py:190} INFO - [2026-09-26T18:11:47.952+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/tutorial_objectstorage.py
+[2026-09-26T18:11:47.963+0000] {processor.py:925} INFO - DAG(s) 'tutorial_objectstorage' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/tutorial_objectstorage.py
+[2026-09-26T18:11:48.056+0000] {logging_mixin.py:190} INFO - [2026-09-26T18:11:48.056+0000] {override.py:1911} INFO - Created Permission View: can edit on DAG:tutorial_objectstorage
+[2026-09-26T18:11:48.064+0000] {logging_mixin.py:190} INFO - [2026-09-26T18:11:48.064+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG:tutorial_objectstorage
+[2026-09-26T18:11:48.069+0000] {logging_mixin.py:190} INFO - [2026-09-26T18:11:48.069+0000] {override.py:1911} INFO - Created Permission View: can read on DAG:tutorial_objectstorage
+[2026-09-26T18:11:48.075+0000] {logging_mixin.py:190} INFO - [2026-09-26T18:11:48.074+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG Run:tutorial_objectstorage
+[2026-09-26T18:11:48.080+0000] {logging_mixin.py:190} INFO - [2026-09-26T18:11:48.080+0000] {override.py:1911} INFO - Created Permission View: menu access on DAG Run:tutorial_objectstorage
+[2026-09-26T18:11:48.085+0000] {logging_mixin.py:190} INFO - [2026-09-26T18:11:48.084+0000] {override.py:1911} INFO - Created Permission View: can create on DAG Run:tutorial_objectstorage
+[2026-09-26T18:11:48.090+0000] {logging_mixin.py:190} INFO - [2026-09-26T18:11:48.090+0000] {override.py:1911} INFO - Created Permission View: can read on DAG Run:tutorial_objectstorage
+[2026-09-26T18:11:48.091+0000] {logging_mixin.py:190} INFO - [2026-09-26T18:11:48.090+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-09-26T18:11:48.101+0000] {logging_mixin.py:190} INFO - [2026-09-26T18:11:48.101+0000] {dag.py:3262} INFO - Creating ORM DAG for tutorial_objectstorage
+[2026-09-26T18:11:48.102+0000] {logging_mixin.py:190} INFO - [2026-09-26T18:11:48.102+0000] {dag.py:4180} INFO - Setting next_dagrun for tutorial_objectstorage to None, run_after=None
+[2026-09-26T18:11:48.117+0000] {processor.py:208} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/tutorial_objectstorage.py took 0.174 seconds
+[2026-09-26T18:12:18.754+0000] {processor.py:186} INFO - Started process (PID=506) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/tutorial_objectstorage.py
+[2026-09-26T18:12:18.756+0000] {processor.py:914} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/tutorial_objectstorage.py for tasks to queue
+[2026-09-26T18:12:18.761+0000] {logging_mixin.py:190} INFO - [2026-09-26T18:12:18.760+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/tutorial_objectstorage.py
+[2026-09-26T18:12:18.790+0000] {processor.py:925} INFO - DAG(s) 'tutorial_objectstorage' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/tutorial_objectstorage.py
+[2026-09-26T18:12:18.844+0000] {logging_mixin.py:190} INFO - [2026-09-26T18:12:18.843+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-09-26T18:12:18.888+0000] {logging_mixin.py:190} INFO - [2026-09-26T18:12:18.887+0000] {dag.py:4180} INFO - Setting next_dagrun for tutorial_objectstorage to None, run_after=None
+[2026-09-26T18:12:18.935+0000] {processor.py:208} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/tutorial_objectstorage.py took 0.194 seconds

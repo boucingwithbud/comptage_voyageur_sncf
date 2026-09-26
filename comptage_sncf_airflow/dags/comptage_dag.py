@@ -3,7 +3,7 @@ from airflow.decorators import dag, task
 from airflow.operators.bash import BashOperator
 from airflow.operators.python import PythonOperator
 from airflow.providers.amazon.aws.transfers.http_to_s3 import HttpToS3Operator
-import requests
+from airflow.providers.databricks.operators.databricks import DatabricksRunNowOperator
 
 default_args = {
     'owner': 'airflow',
@@ -36,8 +36,28 @@ def comptage_dag():
         replace=True
     )
 
-    download_data
+    # Task 2: Run ingestion job from databricks to load data into the lakehouse
 
+    run_ingestion = DatabricksRunNowOperator(
+        task_id='run_ingestion',
+        databricks_conn_id='databricks_default',
+        job_id=12345
+    )
+
+    # Task 3: Run dbt staging models and tests to transform the data
+
+    run_dbt = BashOperator(
+        task_id='run_dbt',
+        bash_command='cd /opt/airflow/dags/comptage_sncf_airflow && dbt run --staging && dbt test --staging'
+    )
+
+    # Task 4: Run dbt mart models and tests to transform the data
+    run_dbt_mart = BashOperator(
+        task_id='run_dbt_mart',
+        bash_command='cd /opt/airflow/dags/comptage_sncf_airflow && dbt run --mart && dbt test --mart'
+    )
+
+    download_data >> run_ingestion >> run_dbt >> run_dbt_mart
 
 comptage_dag()
 
