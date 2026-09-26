@@ -14,3 +14,19 @@ Runtime Error
 [0m11:15:18.362749 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71d451c135c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71d4519bf650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71d4518c4490>]}
 [0m11:15:18.363056 [debug] [MainThread]: Flushing usage events
 [0m11:15:18.859601 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:15:55.405971 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7055b43c6120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7055b5f84f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7055b2a43890>]}
+
+
+============================== 14:15:55.409208 | 116ebe3c-4102-47ee-82e1-2ec509fe9ae3 ==============================
+[0m14:15:55.409208 [info ] [MainThread]: Running with dbt=1.12.3
+[0m14:15:55.409674 [debug] [MainThread]: running dbt with arguments {'empty': 'False', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'invocation_command': 'dbt run --select mart', 'log_path': 'logs', 'version_check': 'True', 'use_colors': 'True', 'profiles_dir': '/home/paul/.dbt', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'log_format': 'default', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'debug': 'False', 'warn_error': 'None', 'quiet': 'False', 'printer_width': '80', 'maximum_seed_size_mib': '1', 'write_json': 'True', 'hints_enabled': 'True', 'static_parser': 'True', 'cache_selected_only': 'False'}
+[0m14:15:55.410049 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/paul/comptage_voyageur_sncf/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m14:15:55.410632 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.057630353, "process_in_blocks": "106208", "process_kernel_time": 0.163389, "process_mem_max_rss": "116488", "process_out_blocks": "16", "process_user_time": 1.376434}
+[0m14:15:55.410965 [debug] [MainThread]: Command `dbt run` failed at 14:15:55.410902 after 0.06 seconds
+[0m14:15:55.411196 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7055b2e1b5c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7055b2bc3650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7055b2ac8490>]}
+[0m14:15:55.411439 [debug] [MainThread]: Flushing usage events
+[0m14:15:55.916233 [debug] [MainThread]: An error was encountered while trying to flush usage events
