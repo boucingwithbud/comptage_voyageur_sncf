@@ -41,7 +41,7 @@ def comptage_dag():
     run_ingestion = DatabricksRunNowOperator(
         task_id='run_ingestion',
         databricks_conn_id='databricks_default',
-        job_id=12345
+        job_id={{var.value.databricks_job_id}}
     )
 
     # Task 3: Run dbt staging models and tests to transform the data
