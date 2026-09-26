@@ -1,0 +1,23 @@
+[2026-09-25T14:28:25.920+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-09-25T14:28:25.933+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: comptage_dag.download_data manual__2026-09-25T14:28:24.764808+00:00 [queued]>
+[2026-09-25T14:28:25.940+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: comptage_dag.download_data manual__2026-09-25T14:28:24.764808+00:00 [queued]>
+[2026-09-25T14:28:25.940+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2026-09-25T14:28:25.950+0000] {taskinstance.py:2890} INFO - Executing <Task(HttpToS3Operator): download_data> on 2026-09-25 14:28:24.764808+00:00
+[2026-09-25T14:28:25.956+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=484) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-09-25T14:28:25.957+0000] {standard_task_runner.py:72} INFO - Started process 485 to run task
+[2026-09-25T14:28:25.957+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'comptage_dag', 'download_data', 'manual__2026-09-25T14:28:24.764808+00:00', '--job-id', '47', '--raw', '--subdir', 'DAGS_FOLDER/comptage_dag.py', '--cfg-path', '/tmp/tmp5kd_okt6']
+[2026-09-25T14:28:25.959+0000] {standard_task_runner.py:105} INFO - Job 47: Subtask download_data
+[2026-09-25T14:28:25.996+0000] {task_command.py:467} INFO - Running <TaskInstance: comptage_dag.download_data manual__2026-09-25T14:28:24.764808+00:00 [running]> on host d7d2b2055729
+[2026-09-25T14:28:26.058+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='paulcoffi2002@gmail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='comptage_dag' AIRFLOW_CTX_TASK_ID='download_data' AIRFLOW_CTX_EXECUTION_DATE='2026-09-25T14:28:24.764808+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-09-25T14:28:24.764808+00:00'
+[2026-09-25T14:28:26.059+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-09-25T14:28:26.062+0000] {http_to_s3.py:165} INFO - Calling HTTP method
+[2026-09-25T14:28:26.069+0000] {base.py:84} INFO - Retrieving connection 'sncf_comptage_endpoint'
+[2026-09-25T14:28:27.616+0000] {base.py:84} INFO - Retrieving connection 'cloudfare_conn'
+[2026-09-25T14:28:27.617+0000] {connection_wrapper.py:325} INFO - AWS Connection (conn_id='cloudfare_conn', conn_type='aws') credentials retrieved from login and password.
+[2026-09-25T14:28:28.923+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-09-25T14:28:28.924+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=comptage_dag, task_id=download_data, run_id=manual__2026-09-25T14:28:24.764808+00:00, execution_date=20260925T142824, start_date=20260925T142825, end_date=20260925T142828
+[2026-09-25T14:28:28.978+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-09-25T14:28:28.990+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-09-25T14:28:28.991+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
