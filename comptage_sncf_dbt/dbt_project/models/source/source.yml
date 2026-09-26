@@ -1,0 +1,22 @@
+sources:
+  - name: bronze
+    description: C'est la source de données brute, qui contient toutes les données collectées par le système de comptage SNCF. Elle est utilisée pour alimenter les modèles de transformation et d'analyse dans dbt.
+    tables:
+      - name: comptage
+        database: sncf_comptage
+        description: >
+          C'est la table principale qui contient les données de comptage collectées par le système de comptage SNCF. Elle est utilisée pour alimenter les modèles de transformation et d'analyse dans dbt.
+        columns:
+          - name: id
+            description: Clé primaire de la table, qui identifie de manière unique chaque enregistrement de comptage.
+            data_tests:
+              - unique
+              - not_null
+          - name: somme_de_montants
+            description: Somme des montants collectés pour chaque enregistrement de comptage. Cette colonne est utilisée pour calculer les totaux et les agrégations dans les modèles de transformation et d'analyse dans dbt.
+            data_tests:
+              - not_null
+          - name: code_gare
+            description: Code de la gare où le comptage a été effectué. Cette colonne est utilisée pour filtrer et regrouper les données dans les modèles de transformation et d'analyse dans dbt.
+            data_tests:
+              - not_null
