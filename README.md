@@ -321,20 +321,7 @@ comptage_sncf_airflow/
 └── requirements.txt
 ```
 
-## 9. Améliorations envisageables
-
-Les éléments suivants sont des pistes d'évolution et ne sont pas présentés comme des fonctionnalités déjà implémentées :
-
-- Ajouter des tests dbt sur les relations entre la table de faits et les dimensions, ainsi que des contrôles de valeurs métier.
-- Documenter explicitement la granularité métier de `factcomptage`.
-- Étudier la stabilité des clés substituts générées par `ROW_NUMBER()` lors des reconstructions des dimensions.
-- Ajouter une dimension `type_jour` si cet attribut doit être exploité dans les analyses.
-- Rendre les sélections dbt explicites avec des tags ou un fichier `selectors.yml`.
-- Externaliser les paramètres d'environnement et renforcer la gestion des secrets.
-- Ajouter des contrôles de fraîcheur et de volume des données, ainsi qu'une meilleure observabilité des exécutions.
-- Ajouter des mécanismes de reprise et de déduplication adaptés aux fichiers d'entrée.
-
-## 10. Technologies
+## 9. Technologies
 
 - **Apache Airflow** : orchestration et planification.
 - **Docker Compose** : environnement local multi-services.
